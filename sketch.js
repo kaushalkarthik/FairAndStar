@@ -43,16 +43,19 @@ function setup() {
 function draw() {
   background(bgImg);
 
-  fairy.velocityX=0;
-  fairy.velocityY=0;
+  fairy.X=0;
+  fairy.Y=0;
 
   if(keyDown(RIGHT_ARROW)){
-	  fairy.velocityX=6;
+	  fairy.x=fairy.x+20;
  }
 
    else if (keyDown(LEFT_ARROW)){
-	   fairy.velocityX=-6;
+	   fairy.x=fairy.x-20;
    }
+	
+   star.x=starBody.position.x;
+   star.y=starBody.position.y
 
   drawSprites();
 
